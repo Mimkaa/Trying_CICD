@@ -22,6 +22,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
   build:
+    needs:
+      - flake8_py3
     runs-on: ubuntu-latest
 
     steps:
